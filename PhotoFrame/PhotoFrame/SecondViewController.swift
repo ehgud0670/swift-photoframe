@@ -38,5 +38,5 @@ class SecondViewController: UIViewController,UITextViewDelegate, UIImagePickerCo
         self.photoImageView.contentMode = .scaleAspectFill
         picker.dismiss(animated: false)
     }
+    
 }
-
