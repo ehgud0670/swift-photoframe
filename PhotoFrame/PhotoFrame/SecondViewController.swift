@@ -14,7 +14,6 @@ class SecondViewController: UIViewController,UITextViewDelegate, UIImagePickerCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
@@ -25,9 +24,12 @@ class SecondViewController: UIViewController,UITextViewDelegate, UIImagePickerCo
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = false
+        let picker : UIImagePickerController = {
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.allowsEditing = false
+            return picker
+        }()
         self.present(picker, animated: false)
     }
         
