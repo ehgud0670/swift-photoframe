@@ -16,14 +16,14 @@ class SecondViewController: UIViewController,UITextViewDelegate, UIImagePickerCo
         super.viewDidLoad()
     }
     
-    @IBAction func nextImageButtonTouched(_ sender: Any) {
+    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
         let randomNum = Int.random(in: 1...22)
         let resource = String(format: "%02d.jpg", randomNum)
         self.photoImageView.image = UIImage(named: resource)
         self.photoImageView.contentMode = .scaleAspectFill
     }
     
-    @IBAction func selectButtonTouched(_ sender: Any) {
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
         let picker : UIImagePickerController = {
             let picker = UIImagePickerController()
             picker.delegate = self
